@@ -1,0 +1,215 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabet Learning System</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image:linear-gradient( rgba(18, 140, 216, 0.6),rgba(208, 34, 224, 0.6));
+        }
+        body p {
+            font-size: 30px;
+            font-weight: bolder;
+        }
+        .contents{
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+        .alphabets-side{
+            width: 70%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            padding: 15px;
+            margin-right: 10px;
+            box-shadow: inset 0px 0px 10px 3px grey; 
+        }
+        button{
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            border: none;
+            box-shadow:inset 0px -10px 5px 5px grey;
+            background-image:linear-gradient(rgba(19, 157, 109, 0.3),rgba(163, 26, 26, 0.3));
+            border-radius:50% ;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bolder;
+            font-size: 50px;
+        }
+        button:hover{
+            box-shadow:inset 0px 10px 5px 5px grey;
+        }
+        .display-side{
+            padding: 15px;
+            width: 30%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            box-shadow: inset 0px 0px 10px 3px grey; 
+        }
+        .display-side img{
+            width: 350px;
+            height: 350px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 5px 2px white; 
+        }
+        .display-side p{
+            color: white;
+            text-shadow: -3px -1px 10px black ;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bolder;
+            font-size: 30px;
+        }
+        @media screen and (max-width: 768px) {
+            body{
+               padding: 20px;
+            }
+            .contents{
+                width: 400px;
+               flex-direction: column-reverse;
+            }
+            .alphabets-side{
+                width: 100%;
+            }
+            .display-side{
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .display-side img{
+                width: 450px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p>Alpahbet E-learning System</p>
+    <div class="contents">
+        <div class="alphabets-side">
+        <button id="a" onclick="document.getElementById('image-name').innerHTML = 'Ash'">A</button>
+        <button id="b" onclick="document.getElementById('image-name').innerHTML = 'Basket'">B</button>
+        <button id="c" onclick="document.getElementById('image-name').innerHTML = 'Camera'">C</button>
+        <button id="d" onclick="document.getElementById('image-name').innerHTML = 'Drill'">D</button>
+        <button id="e" onclick="document.getElementById('image-name').innerHTML = 'Eggs'">E</button>
+        <button id="f" onclick="document.getElementById('image-name').innerHTML = 'Fish'">F</button>
+        <button id="g" onclick="document.getElementById('image-name').innerHTML = 'Gloves'">G</button>
+        <button id="h" onclick="document.getElementById('image-name').innerHTML = 'Helmet'">H</button>
+        <button id="i" onclick="document.getElementById('image-name').innerHTML = 'Ice'">I</button>
+        <button id="j" onclick="document.getElementById('image-name').innerHTML = 'Jar'">J</button>
+        <button id="k" onclick="document.getElementById('image-name').innerHTML = 'Keys'">K</button>
+        <button id="l" onclick="document.getElementById('image-name').innerHTML = 'Lamp'">L</button>
+        <button id="m" onclick="document.getElementById('image-name').innerHTML = 'Mirror'">M</button>
+        <button id="n" onclick="document.getElementById('image-name').innerHTML = 'Nest'">N</button>
+        <button id="o" onclick="document.getElementById('image-name').innerHTML = 'Oil'">O</button>
+        <button id="p" onclick="document.getElementById('image-name').innerHTML = 'Pepper'">P</button>
+        <button id="q" onclick="document.getElementById('image-name').innerHTML = 'Queen'">Q</button>
+        <button id="r" onclick="document.getElementById('image-name').innerHTML = 'Raincoat'">R</button>
+        <button id="s" onclick="document.getElementById('image-name').innerHTML = 'Scissors'">S</button>
+        <button id="t" onclick="document.getElementById('image-name').innerHTML = 'Table'">T</button>
+        <button id="u" onclick="document.getElementById('image-name').innerHTML = 'Umbrella'">U</button>
+        <button id="v" onclick="document.getElementById('image-name').innerHTML = 'Van'">V</button>
+        <button id="w" onclick="document.getElementById('image-name').innerHTML = 'Watch'">W</button>
+        <button id="x" onclick="document.getElementById('image-name').innerHTML = 'Xender'">X</button>
+        <button id="y" onclick="document.getElementById('image-name').innerHTML = 'Yam'">Y</button>
+        <button id="z" onclick="document.getElementById('image-name').innerHTML = 'Zip'">Z</button>
+        </div>
+        <div class="display-side">
+            <img src="#" alt="alphabet-image" id="alphabet-image">
+            <p id="image-name">Alphabet name</p>
+        </div>
+    </div>
+    <script>
+        var image = document.querySelector('#alphabet-image')
+        document.querySelector('#a').addEventListener('click', function(){
+            image.src = 'images/alpha_a.jpeg'
+        })
+        document.querySelector('#b').addEventListener('click', function(){
+            image.src = 'images/alpha_b.jpeg'
+        })
+        document.querySelector('#c').addEventListener('click', function(){
+            image.src = 'images/alpha_c.jpeg'
+        })
+        document.querySelector('#d').addEventListener('click', function(){
+            image.src = 'images/alpha_d.jpeg'
+        })
+        document.querySelector('#e').addEventListener('click', function(){
+            image.src = 'images/alpha_e.jpeg'
+        })
+        document.querySelector('#f').addEventListener('click', function(){
+            image.src = 'images/alpha_f.jpeg'
+        })
+        document.querySelector('#g').addEventListener('click', function(){
+            image.src = 'images/alpha_g.jpeg'
+        })
+        document.querySelector('#h').addEventListener('click', function(){
+            image.src = 'images/alpha_h.jpeg'
+        })
+        document.querySelector('#i').addEventListener('click', function(){
+            image.src = 'images/alpha_i.jpeg'
+        })
+        document.querySelector('#j').addEventListener('click', function(){
+            image.src = 'images/alpha_j.jpeg'
+        })
+        document.querySelector('#k').addEventListener('click', function(){
+            image.src = 'images/alpha_k.jpeg'
+        })
+        document.querySelector('#l').addEventListener('click', function(){
+            image.src = 'images/alpha_l.jpeg'
+        })
+        document.querySelector('#m').addEventListener('click', function(){
+            image.src = 'images/alpha_m.jpeg'
+        })
+        document.querySelector('#n').addEventListener('click', function(){
+            image.src = 'images/alpha_n.jpeg'
+        })
+        document.querySelector('#o').addEventListener('click', function(){
+            image.src = 'images/alpha_o.jpeg'
+        })
+        document.querySelector('#p').addEventListener('click', function(){
+            image.src = 'images/alpha_p.jpeg'
+        })
+        document.querySelector('#q').addEventListener('click', function(){
+            image.src = 'images/alpha_q.jpeg'
+        })
+        document.querySelector('#r').addEventListener('click', function(){
+            image.src = 'images/alpha_r.jpeg'
+        })
+        document.querySelector('#s').addEventListener('click', function(){
+            image.src = 'images/alpha_s.jpeg'
+        })
+        document.querySelector('#t').addEventListener('click', function(){
+            image.src = 'images/alpha_t.jpeg'
+        })
+        document.querySelector('#u').addEventListener('click', function(){
+            image.src = 'images/alpha_u.jpeg'
+        })
+        document.querySelector('#v').addEventListener('click', function(){
+            image.src = 'images/alpha_v.jpeg'
+        })
+        document.querySelector('#w').addEventListener('click', function(){
+            image.src = 'images/alpha_w.jpeg'
+        })
+        document.querySelector('#x').addEventListener('click', function(){
+            image.src = 'images/alpha_x.jpeg'
+        })
+        document.querySelector('#y').addEventListener('click', function(){
+            image.src = 'images/alpha_y.jpeg'
+        })
+        document.querySelector('#z').addEventListener('click', function(){
+            image.src = 'images/alpha_z.jpeg'
+        })
+    </script>
+</body>
+</html>
